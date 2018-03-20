@@ -4,21 +4,19 @@ import React from "react";
 // re-render khi props thay doi
 export class Content extends React.Component {
     render() {
-        const todo = this.props.data ;
-        console.log();
+        var todo = this.props.data;
         return (
             <div className="_Content">
-                {/*onClick={()=>this.props.onDelete*/}
-                <button >Xoa cai nay</button>
                 <div className="Content__icon">
-                    <img src="" alt="zxc"/>
+                    <img src="./favicon.ico" alt=""/>
                 </div>
-                    <div className="Content__title">
-
+                <div className="Content__title">
+                    {todo.title}
                 </div>
                 <div className="Content__main">
-                    ""
+                    {todo.description}
                 </div>
+                <button onClick={() =>this.props._handleDelete()}> Xoa cai nay</button>
             </div>
         );
     }

@@ -1,44 +1,46 @@
 import React, {Component} from "react";
-import {Content} from "./Content";
+import {ToDoContent} from "./ToDoContent";
 
 export class __Main extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            data: []
-        }
+            title: "",
+            description: ""
+        };
     };
 
-    addTodo(newTodo) {
-        let arr = this.state.data;
-        arr.push(newTodo);
+    eventSubmit(e) {
+        e.preventDefault();
+        console.log('run');
         this.setState({
-            data: arr
+            title: e.target['title'].value,
+            description:"zxc"
         });
-    }
 
-    removeTodo(idz) {
-        // xoa to do id:  idz
+
     }
 
     render() {
+        console.log(this.state);
         return (
             <div className="Main">
-
-                <form className="addBox" >
-                    <input type="text"/>
-                    <input type="text" />
-                    <input type="submit"/>
+                <form className="addBox" onSubmit={this.eventSubmit.bind(this)}>
+                    <label>
+                        Title
+                        <input type="text" name="title"/>
+                    </label>
+                    <label>
+                        Description
+                        <input type="text" name="description"/>
+                    </label>
+                    {/*<input type="submit" value="Add"/>*/}
+                    <button type="submit">Add</button>
                 </form>
-
-
-                <div className="Contents">
-                {
-                this.state.data.map(e => <Content data={e} onDelete={this.removeTodo.bind(this)}/>)
-                }
-                </div>
-
+                <ToDoContent data={this.state}/>
             </div>
         );
     }
+
 }
+
