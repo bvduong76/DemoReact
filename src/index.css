@@ -1,0 +1,159 @@
+/*@font-face {*/
+/*font-family: "Roboto";*/
+/*src: url("../fonts/nucleo-outline.css"),*/
+/*url("../fonts/nucleo-outline.ttf"),*/
+/*url("../fonts/nucleo-outline.woff"),*/
+/*url("../fonts/nucleo-outline.woff2");*/
+/*}*/
+/*@font-face {*/
+/*font-family: "RobotoSlab";*/
+/*src: url("../fonts/nucleo-outline.css"),*/
+/*url("../fonts/nucleo-outline.ttf"),*/
+/*url("../fonts/nucleo-outline.woff"),*/
+/*url("../fonts/nucleo-outline.woff2");*/
+/*}*/
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.title {
+    position: relative;
+    margin: 0 auto;
+    width: 281px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+
+}
+
+.MainTitle p {
+    font-family: "RobotoSlab", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+._Content {
+    margin: 35px 10px 0 10px;
+    position: relative;
+    background-color: #caf9ff;
+    border-radius: 10px;
+    padding: 15px 20px 15px 80px;
+}
+
+.Content__title {
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Content__main {
+    margin-top: 12px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 3em;
+    overflow: hidden;
+
+}
+
+.Content__icon {
+    border-radius: 50%;
+    background-color: #ff7a00;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: -15px;
+    top: -20px;
+}
+
+.Content__icon img {
+    width: 40px;
+    height: 42px;
+    margin-left: 17px;
+    margin-top: 16px;
+    /*animation: App-logo-spin infinite 5s linear;*/
+}
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.Content--btn-Back{
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    right: 0;
+    top: 0;
+}
+.Content--btn-Back button {
+    border: 0;
+    border-radius: 0 5px;
+    background-color: orange;
+    width: 40px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 576px) {
+    .MainTitle p {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .Listing {
+        margin: 0 20px;
+    }
+
+    .Content {
+        margin: 25px 10px 0 10px;
+        position: relative;
+        background-color: #caf9ff;
+        border-radius: 10px;
+        padding: 15px 14px 12px 55px;
+    }
+
+    .Content__title{
+        border-bottom: 1px solid #dfdfdf;
+        padding-bottom: 8px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .Content__main{
+        margin-top: 12px;
+        font-size: 13px;
+
+    }
+
+    .Content__icon {
+
+        width: 55px;
+        height: 55px;
+        left: -10px;
+        top: -10px;
+    }
+
+    .Content__icon img {
+        width: 31px;
+        height: 33px;
+        margin: 11px 11px;
+    }
+
+    .Content--btn-Back button {
+        border: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-radius: 0 5px;
+        background-color: #dfdfdf;
+        width: 34px;
+        height: 25px;
+    }
+}
